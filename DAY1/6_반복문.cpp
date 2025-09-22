@@ -12,7 +12,13 @@ int main()
 	}
 
 	// C++11 에서 추가된 새로운 for 문
-	for (int e : x)
+	// => "ranged-for" 라고 부릅니다.
+	// => x의 위치는 배열, std::vector, std::list 등이 모두 가능
+	// 파이썬 : for e in x
+	// C#     : foreach var e in x
+	
+	//for (int e : x)
+	for (auto e : x)
 	{
 		std::cout << e << std::endl;
 	}
