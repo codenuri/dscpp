@@ -13,16 +13,19 @@ auto Add1(T1 a, T2 b)
 	return a + b;
 }
   
-
+// 아래 코드는 리턴 타입을 사용자가 표기한것 => decltype(a + b)
+// => 즉, 항상 a+b의 타입을 반환 타입으로 해달라.
 template<typename T1, typename T2>
 auto Add2(T1 a, T2 b) -> decltype(a + b)
 {
+	if (b == 0) return a; // 이 코드가 있어도 에러 아님
 	return a + b;
 }
 
 int main()
 {
-	std::cout << Add(1, 2.1) << std::endl;
+	std::cout << Add1(1, 2.1) << std::endl;
+	std::cout << Add2(1, 2.1) << std::endl;
 
 }
 
