@@ -9,6 +9,10 @@
 using DWORD = int;
 using PF = void(*)();
 
+// typedef : 타입의 별명만 만들수 있다.
+// using   : 타입의 별명과 "템플릿의 별명"을 만들수 있다.
+//							^ 이 특징을 위해 만든것
+
 int main()
 {
 	DWORD n; // int n
