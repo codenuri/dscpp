@@ -10,12 +10,17 @@ int main()
 {
 	const int c = 10;
 
-	int* p = &c; // ????
+//	int* p = &c; // error. 상수의 주소를 상수가 아닌것을 가리키는
+				//			포인터에 담을수 없다.
+				//			암시적 변환 안됨
 
+	int* p = (int*)&c; // ok. 명시적 변환은 가능
+
+	// 위코드가 된다면, 아래 코드도 에러 아님.
 	*p = 20; 
 
 	// 아래 결과 예측해 보세요
-	std::cout << c << std::endl;
-	std::cout << *p << std::endl;
+	std::cout << c << std::endl;  // ?
+	std::cout << *p << std::endl; // ?
 
 }
