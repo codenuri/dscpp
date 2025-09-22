@@ -1,0 +1,34 @@
+강석민 강사 ( smkang @ codenuri.co.kr )
+
+#1. 노트북에 visual studio 2022 community 설치되어 있는지 확인해 보세요.  없으신분은 
+=> 1. visualstudio.net 에 접속해서 
+=> 2. "community 2022" 다운 받은후 설치
+=> 3. 설치시 반드시 "C++ 을 사용한 데스크탑 개발" 을 체크후 설치
+
+#2. github.com/codenuri/dscpp 에서 "DAY1.zip" 받으세요
+=> 수업시간에 만드는 소스도 이곳에 올려 드리겠습니다.
+
+#3. 수업시간
+오전 : 08:30 ~ 11:50
+점심 : 11:50 ~ 13:00
+오후 : 13:00 ~ 17:20
+평가 : 마지막날 4:00 ~ 5:00. 객관식 +단답형 20문제
+
+#4. C++ 참고 자료
+
+isocpp.org - 표준 위원회
+cppreference.com - 도움말
+
+godbolt.org => 다양한 언어의 대한 컴파일 결과(기계어, 어셈)확인
+
+유튜브 - cppcon 채널 검색. 매년 개최되는 C++ conference 의 영상
+
+
+
+
+
+
+
+
+
+
