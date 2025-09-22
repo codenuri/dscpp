@@ -25,8 +25,9 @@ int main()
 	auto a = c;	// 1. int a = c;			<== 정답
 				// 2. const int a = c;
 	
-	// auto : 우변의 표현식으로 타입 결정
-	// decltype : () 안의 표현식으로 타입결정
+	// auto    : 우변의 표현식으로 타입 결정	 - C++11
+	// decltype : () 안의 표현식으로 타입결정  - C++11
+	//			  "템플릿 만들때 사용" - 오후에 배우게 됩니다.
 
 	decltype(n) d; // n 의 타입은 int, 따라서 이코드는 "int d"
 }
