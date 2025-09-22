@@ -9,8 +9,9 @@ int main()
 	constexpr int c3 = 10;
 
 	int x1[10]; // ?
-	int x2[c1]; // ?
-	int x3[c2]; // ?
-	int x4[c3]; // ?
+	int x2[sz]; // ?
+	int x3[c1]; // ?
+	int x4[c2]; // ?
+	int x5[c3]; // ?
 
 }
