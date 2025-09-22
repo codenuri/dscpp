@@ -4,7 +4,12 @@
 // 1. constexpr 상수
 // 2. constexpr 함수 - 아래 소스
 
-int add(int a, int b)
+// constexpr 함수 - C++11 에서 가장 막강한 기능중 하나
+// 1. 인자 값을 컴파일 시간에 알수 있고
+// 2. 함수 호출이 사용되는 자리가 "컴파일 시간에 값을 알아야 한다면"
+// 3. 함수 실행을 컴파일 시간에 해달라.!
+
+constexpr int add(int a, int b)
 {
 	return a + b;
 }
