@@ -22,15 +22,28 @@ int main()
 	Point p2 = { 1,2 };
 
 	// = 이 없어도 됩니다.
-	int n3 { 10 };
-	int x3[3] { 1,2,3 };
-	Point p3 { 1,2 };
+	int n3{ 10 };
+	int x3[3]{ 1,2,3 };
+	Point p3{ 1,2 };
 
 	// direct(직접) initialization : = 이 없는 경우
 	// copy(복사)   initialization : = 이 있는 경우
 	// 
 	// => 생성자가 있는 경우는 약간의 차이가 있지만
 	// => 위 3개의 경우는 차이 없음.(생성자 없으므로)
+
+	// prevent narrow
+
+	int  n4 = 3.4; // ok. 단, 데이타 손실에 따른 경우
+					// C#, Java 등의 대부분의 다른 언어는 에러
+					// C/C++ 가능 <= 좋지 않은 문법
+
+	char c4 = 500; // ok. 단, 오버플로우 발생
+
+	int  n5 = { 3.4 }; // error. 데이타 손실이나 오버플로우는 모두에러
+	char c5 = { 500 }; // error
+
+	int  n6 { 3.4 }; // error
 }
 
 
