@@ -20,6 +20,12 @@ void goo(auto n)
 
 int main()
 {
-	goo(1);
-	goo(3.4);
+	goo(1);		// void goo(int) 함수 생성
+	goo(3.4);	// void goo(double) 함수 생성
+				// => 즉, goo는 template 입니다.
+}
+// 위 goo 는 아래와 완벽히 동일합니다.
+template<typename T>
+void goo(T n)
+{
 }
