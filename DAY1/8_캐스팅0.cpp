@@ -17,8 +17,8 @@ int main()
 	// => 메모리의 해석방법을 변경..
 	// => 즉, 4바이트 메모리를 1바이트 단위로 접근
 	// 
-//	char* p = &n;
-	char* p = (char*)&n;
+//	char* p = &n;			// error
+	char* p = (char*)&n;	// ok. 명시적 캐스팅 필요
 
 	if (*p == 0x44)
 	{
