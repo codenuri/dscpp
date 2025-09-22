@@ -16,6 +16,8 @@ int main()
 	int x2[sz]; // error.
 	int x3[c1]; // error. runtime constant
 	int x4[c2]; // ok.    c1과 같은 const 지만 compile-time constant
+				// => 이게 되면 constexpr 은 필요 없지 않나요 ??
+				// => constexpr2.cpp 참고
 	int x5[c3]; // ok.
 
 }
