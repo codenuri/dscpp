@@ -18,8 +18,15 @@ int main()
 {
 	int a = 1, b = 2;
 
-	int x1[add(3, 4)];
-	int x2[add(a, b)];
+	int x1[add(3, 4)];	// ok. 컴파일 하면 int x1[7]
+//	int x2[add(a, b)];	// error. 인자값을 컴파일 할때 알수 없다.
 
-	int n1 = add(a, b);
+	int n1 = add(a, b); // ok. 인자값을 컴파일 할때 알수없으므로
+						//     실행할때 호출.
+
+	int n2       = add(1, 2); // 컴파일 시간 ? 실행시간 ?
+
+	const int n3 = add(1, 2); // 컴파일 시간 ? 실행시간 ?
+
+	constexpr int n4 = add(1, 2); // 컴파일 시간 ? 실행시간 ?
 }
