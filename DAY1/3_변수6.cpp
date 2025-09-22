@@ -1,0 +1,33 @@
+﻿// 3_변수6.cpp   31 page 
+
+struct Point
+{
+	int x, y;
+};
+int main()
+{
+	Point pt = { 1,2 };
+
+	int x = pt.x;
+	int y = pt.y;
+
+	// 구조체나 배열에서 각 요소 값을 꺼낼때, C++17 부터 아래 처럼 가능
+	auto [a1, b1] = pt; // auto a1 = pt.x;
+						// auto b1 = pt.y;
+
+//	int [a1, b1] = pt; // error. auto 만 가능
+//	auto [a1, b1, c1] = pt; // error. 갯수가 같아야 합니다.
+
+	//-----------------------------
+	// 배열도 가능
+	int arr[3] = { 1,2,3 };
+	auto [c1, c2, c3] = arr; // ok
+
+	//----------------------------
+	// 파이썬, C# 의 _ 처럼. 필요 없는것을 무시 할수 없나요 ? 
+	// => C++26 부터 가능.
+	// => C++26 이전에는 아래 같은 현상
+	auto [d1, _, d2] = arr; // ok
+	auto [e1, _, e2] = arr; // error.
+}
+ 
