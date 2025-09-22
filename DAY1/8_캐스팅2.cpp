@@ -23,8 +23,13 @@ int main()
 //	int    n = d;	// ok. 단, 경고 발생할수 있다.
 	int    n = static_cast<int>(d); // ok. 의도를 표현, 경고 없음
 
+	// void* => 다른 타입* 캐스팅
+//	int* p1 = malloc(100);	// error. 암시적 변환 안됨
+	int* p1 = static_cast<int*>(malloc(100)); // ok
 
-//	int* p1 = malloc(100);     // C언어 : ok. C++ : 에러
+
+	// int* => double* 변환
+	double* p2 = static_cast<double*>(&n);
 
 
 }
