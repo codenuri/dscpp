@@ -8,10 +8,14 @@ int main()
 	const int c2 = 10;
 	constexpr int c3 = 10;
 
-	int x1[10]; // ?
-	int x2[sz]; // ?
-	int x3[c1]; // ?
-	int x4[c2]; // ?
-	int x5[c3]; // ?
+	// 핵심 
+	// => "배열의 크기" 는 컴파일 시간에 알아야 한다.
+	// => 즉, "compile time constant" 만 가능
+
+	int x1[10]; // ok
+	int x2[sz]; // error.
+	int x3[c1]; // error. runtime constant
+	int x4[c2]; // ok.    c1과 같은 const 지만 compile-time constant
+	int x5[c3]; // ok.
 
 }
