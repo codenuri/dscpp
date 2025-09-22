@@ -7,7 +7,9 @@ int main()
 	int x[10] = { 1,2,3,4,5,6,7,8,9,10 };
 
 //	for (auto e : x)	// 전체 열거
-	for (auto e : std::views::reverse(x) )	// 거꾸로 열거
+//	for (auto e : std::views::reverse(x) )	// 거꾸로 열거
+//	for (auto e : std::views::take(x, 5))	// 처음부터 5개만
+	for (auto e : std::views::reverse(std::views::take(x, 5)))
 	{
 		std::cout << e << std::endl;
 	}
