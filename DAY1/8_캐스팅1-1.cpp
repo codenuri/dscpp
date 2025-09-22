@@ -8,7 +8,10 @@
 
 int main()
 {
-	const int c = 10;
+//	const int c = 10;
+
+	int n = 10;
+	const int c = n;
 
 //	int* p = &c; // error. 상수의 주소를 상수가 아닌것을 가리키는
 				//			포인터에 담을수 없다.
