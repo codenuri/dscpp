@@ -33,6 +33,6 @@ int main()
 
 	// #2. 타입 인자 생략
 	// => 이 경우, 함수 인자로 부터 T 의 타입 추론
-	square(3);
-	square(3.4);
+	square(3);		// T = int 로 추론
+	square(3.4);	// T = double 로 추론
 }
