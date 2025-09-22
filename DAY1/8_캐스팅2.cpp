@@ -29,8 +29,11 @@ int main()
 
 
 	// int* => double* 변환
-	double* p2 = static_cast<double*>(&n);
-
+	double* p2 = static_cast<double*>(&n); // error. 위험한 작업
+	double* p2 = reinterpret_cast<double*>(&n); // ok.
+						// => 이런 용도로 사용하는 캐스팅.
+						// => 결국 코드에 의도를 나타내었으므로 허용
+						// => 개발자의 실수가 아닌 의도 라는 것
 
 }
 
