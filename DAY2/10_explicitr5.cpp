@@ -22,10 +22,15 @@ int main()
 	std::vector<int> v2{10, 0}; // 2개를 10, 2로 초기화
 
 
-	std::vector<int> v3(10); // 10개 요소
-	std::vector<int> v4{ 10 }; // 1개 요소를 10으로
+	std::vector<int> v3(10);   // 10개 요소. 초기값으면 0으로 초기화
+	std::vector<int> v4{10}; // 1개 요소를 10으로
 
 	// 아래 코드에서 여러 여부를 생각해보세요
-	std::vector<int> v5 = { 10 };
-	std::vector<int> v6 = 10;
+	std::vector<int> v5 = { 10 }; // ok
+								// vector(std::initializer_list) 생성자는
+								// explicit 아님.
+
+	std::vector<int> v6 = 10;	// error.
+								// vector(int) 인 생성자
+								// explicit 
 }
