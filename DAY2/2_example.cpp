@@ -14,7 +14,7 @@ void Swap(int* a, int* b)
 // #2. 함수를 만들지 말고, 함수를 만드는 틀로 제공 - template 도입
 // #3. 성능 향상을 위해서 inline 사용
 // #4. 이름 충돌등을 막기위해 namespace 사용
-
+// #5. 이미 C++ 표준에 std::swap 이 있다.
 namespace Utils
 {
 	template<typename T>
@@ -30,7 +30,8 @@ int main()
 {
 	int x = 3, y = 2;
 	Swap(&x, &y);	   // C 버전
-	Utils::Swap(x, y); //  C++버전 사용
+	Utils::Swap(x, y); // C++버전 사용
+	std::swap(x, y);   // C++ 표준 함수 사용
 
 	std::cout << x << std::endl; // 2
 	std::cout << y << std::endl; // 3
