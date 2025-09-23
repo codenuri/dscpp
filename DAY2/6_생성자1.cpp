@@ -8,7 +8,7 @@ private:
 	std::string name;
 	int  age;
 public:
-	void init(const string& n, int a)
+	void init(const std::string& n, int a)
 	{
 		name = n;
 		age = a;
