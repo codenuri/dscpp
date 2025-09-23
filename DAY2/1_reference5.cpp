@@ -3,6 +3,7 @@
 int x = 0;
 int  foo() { return x; }  // x 가 아닌, x의 값 0을 반환
 int& goo() { return x; }  // x 의 값이 아닌 별명으로 반환
+int* hoo() { return &x; }
 
 int main()
 {
@@ -16,6 +17,8 @@ int main()
 
 	foo() = 20; // error.  "0 = 20" 의 의미
 	goo() = 20; // ok.     "x = 20" 의 의미
+
+	*(hoo()) = 20; // ok
 }
 
 // 핵심
