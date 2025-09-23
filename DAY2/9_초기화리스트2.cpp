@@ -30,6 +30,6 @@ int main()
 	// #3. 성능외에 문법적인 차이도 있습니다.
 	const int c1 = 10; // ok. 상수는 초기화 가능
 
-	const int c2;
-	c2 = 10; // error. 대입은 안됨
+	const int c2;	// error
+	c2 = 10;		// error. 대입은 안됨
 }
