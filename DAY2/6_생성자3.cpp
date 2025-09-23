@@ -52,6 +52,7 @@ int main()
 	int* p1 = new int;  // malloc(sizeof(int)) 의미
 	delete p1;			// free(p1) 의미
 
-	int* p2 = new int[10];
+	int* p2 = new int[10]; // malloc(sizeof(int) * 10)
 	delete[] p2; // <=== 반드시 지켜야 합니다.
+//	delete p2; // <=== [] 가 없으면 버그(에러 없지만, 절대 금지)
 }
