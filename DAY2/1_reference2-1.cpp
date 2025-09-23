@@ -31,9 +31,16 @@ int main()
 }
 void f1(int* p)
 {
-	*p = 3;
+	if (p != nullptr) // 안전하게 작성하려면 포인터는 이 if 문 필요
+	{
+		*p = 3;
+	}
 }
 void f2(int& r)
 {
+	// r 은 reference 이므로 null check 필요 없습니다
 	r = 3;
 }
+f1(nullptr); // ok.
+f2(nullptr); // error.
+// 위와 같은 이유로 reference2.cpp 는 inc3 이 inc2 보다 좋은 코드.
