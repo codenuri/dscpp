@@ -56,3 +56,6 @@ int main()
 }
 
 
+// C++ 표준 라이브러리 이름
+// => STL
+// => Standard Template Library
