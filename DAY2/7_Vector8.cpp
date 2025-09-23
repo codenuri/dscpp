@@ -31,15 +31,20 @@ public:
 	
 		}
 	}
+	// 이제 Vector 제작자는 
+	// => 사용자들이 유용하게 사용할수 있는 멤버 함수를 제공하면 됩니다.
+	int size() { return _size; }
+
+	bool empty() { return _size == 0; }
 };
 
 int main()
 {
 	Vector v(4);	
 
-	v.at(0) = 5;	
 	v.resize(8);	
-	int k = v.at(0);
-	std::cout << k << std::endl; 
+
+	std::cout << v.size() << std::endl;
+
 }
 
