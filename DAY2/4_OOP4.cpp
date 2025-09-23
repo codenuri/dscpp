@@ -25,11 +25,17 @@ int main()
 	// n 을 변수가 아닌 객체라고 해도 됩니다.
 
 	// 그런데, 관례상
-	// primitive        를 메모리에 생성한것 : 변수
+	// primitive(int, double) 를 메모리에 생성한것 : 변수
 	// user define type 를 메모리에 생성한것 : 객체
 
 
 	// #2. 메모리 layout
+	// Rect 객체를 여러개 생성하면
+	// => 멤버 데이타는 객체당 한개씩 각각 놓이게 됩니다.
+	// => 하지만 멤버 함수는 코드메모리에 한개만 있습니다.
 	Rect r1 = { 1,1,10,10 }; 
 	Rect r2 = { 1,1,10,10 };
+
+	std::cout << sizeof(r1) << std::endl; // 멤버 데이타의 크기만..
+	std::cout << sizeof(r1) << std::endl; // 16
 }
