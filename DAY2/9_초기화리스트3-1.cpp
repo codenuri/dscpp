@@ -39,8 +39,8 @@ public:
 	//    을 컴파일러에게 알려주는 것. () 또는 {} 사용
 	Rect() : ptFrom{ 0, 0 }, ptTo{ 1, 1 }
 	{
-		// call Point::Point()   <== ptFrom
-		// call Point::Point()   <== ptTo   
+		// call Point::Point(int, int)   <== ptFrom
+		// call Point::Point(int, int)   <== ptTo   
 
 		std::cout << "Rect()" << std::endl;
 	}
