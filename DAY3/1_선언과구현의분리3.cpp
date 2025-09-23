@@ -1,4 +1,11 @@
-#include <iostream>
+//#include <파일>  // 미리 약속된 디렉토리에서 찾아라
+				   // 즉, C/C++ 표준 헤더 포함할때
+
+//#include "파일"  // 현재 디렉토리에서 찾아라
+			       // 사용자가 만든 헤더 포함할때
+
+
+#include <iostream>		
 
 // Vector 를 사용하려면
 // 1. Vector.h 와 Vector.cpp 을 프로젝트에 추가하세요
