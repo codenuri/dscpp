@@ -37,5 +37,5 @@ int main()
 	Rect r2 = { 1,1,10,10 };
 
 	std::cout << sizeof(r1) << std::endl; // 멤버 데이타의 크기만..
-	std::cout << sizeof(r1) << std::endl; // 16
+	std::cout << sizeof(r2) << std::endl; // 16
 }
