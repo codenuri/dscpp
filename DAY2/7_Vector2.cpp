@@ -14,8 +14,19 @@ int main()
 
 	// 핵심 : 실행시간에 결정된 크기의 메모리를 할당하려면
 	//		  "동적 메모리할당" 밖에 없습니다.
-	int* score = static_cast<int*>(malloc(sizeof(int) * cnt));
-	free(score);
+//	int* score = static_cast<int*>(malloc(sizeof(int) * cnt));
+//	free(score);
+
+	// C++ 에서는 malloc 대신 new
+	int* score = new int[cnt]; 
+
+	for (int i = 0; i < cnt; i++)
+	{
+		std::cin >> score[i];
+	}
+
+	// 사용후에는 제거
+	delete[] score;
 
 
 }
