@@ -22,4 +22,7 @@ int main()
 
 	// foo 는 전달된 인자의 x 를 절대 변경하면 안된다.
 	foo(x);
+
+	Rect rc = { 1,1,10,10 };
+	goo(rc);
 }
