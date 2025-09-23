@@ -1,6 +1,7 @@
 #include <iostream>
 
 // 2. 클래스 선언에는 멤버 함수는 선언만 넣고, 멤버 함수의 구현은 클래스 외부에서 작성 하는 방법
+// Vector.h 를 만들어서 아래 선언부만 복사하세요
 class Vector
 {
 	int* ptr;
@@ -14,9 +15,8 @@ public:
 	void resize(int newsize);
 };
 
-Vector::Vector(int size, int value = 0)
+Vector::Vector(int size, int value /*= 0*/) : sz{size}
 {
-	sz = size;
 	ptr = new int[sz];
 
 	for (int i = 0; i < sz; i++)
