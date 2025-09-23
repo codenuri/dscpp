@@ -43,8 +43,23 @@ int main()
 			// #4. score가 새로운 버퍼 사용
 			score = tmp;
 
-			// #5. ??
+			// #5. size 변수 변경
+			size = size * 2;
 
 		}
 	}
+
+	for (int i = 0; i < cnt; i++)
+	{
+		std::cout << score[i] << ", ";
+	}
+	std::cout << std::endl;
+
+	std::cout << "할당된 메모리 갯수 : " << size << std::endl;
+	std::cout << "데이타 갯수 : " << cnt << std::endl;
+
+	// 더 이상 필요없다면 "최종 메모리는 제거"
+	delete[] score;
+
+
 }
