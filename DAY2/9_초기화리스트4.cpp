@@ -30,9 +30,22 @@ class Person2
 	std::string name;
 	int age;
 public:
+	// 초기화 리스트로 초기화하면
+	// => 생성자를 통해서 값을 넣은것 
 	Person2(const std::string& n, int a) : name{n}, age{a}
 	{
+		// call string::string(const std::string&) <= 이렇게 변경
+		//						n					즉, 한번의 생성자 호출로 초기화
+			
 	}
 };
 
 Person2 p2{ "kim", 20 };
+
+// 위 코드를 godbolt.org 에서 확인하려면 
+// std::string 은 진짜 클래스 이름이 아닙니다.
+// => 별명입니다.
+// => 실제 이름은 basic_string<> 이라는 템플릿 입니다
+// using string = basic_string<char, std::char_trait<char>, std::allocator<char>>;
+
+// 따라서 어셈코드에서 basic_string<...> 이 나오면 string 이라고 생각하세요
