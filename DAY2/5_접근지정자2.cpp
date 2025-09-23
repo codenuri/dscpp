@@ -2,10 +2,18 @@
 #include <string>
 
 
+// struct 와 class 차이점
+// struct : 접근 지정자 생략시 기본이 public
+// class  : 접근 지정자 생략시 기본이 private
 
-struct Person
+// C++ 에서는 위 차이점 밖에 없습니다. 
+// C#, Java : 완전히 다른 문법. 각 언어 참고
+// Rust : struct 만 존재. 
+
+//struct Person
+class Person
 {
-private:				
+//private:				
 	std::string name;	
 	int  age;			
 
