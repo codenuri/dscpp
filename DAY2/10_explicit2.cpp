@@ -17,8 +17,8 @@ int main()
 	Vector v1(10);		
 	Vector v2 = 10;		// explicit 라면 error
 
-	Vector v3{ 10 };	// explicit 라면 error
-	Vector v4 = { 10 }; 
+	Vector v3{ 10 };	
+	Vector v4 = { 10 }; // explicit 라면 error
 
 	foo(v1); // ok.  Vector v = v1;
 	foo(10); // ok.  Vector v = 10
