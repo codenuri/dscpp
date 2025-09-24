@@ -31,11 +31,10 @@ public:
 		// call Base::~Base()
 	}
 };
-
 int main()
 {
 //	Derived d;	
-	Derived d(5);
+	Derived d(5); // "call Derived::Derived(int)"
 }
 
 
