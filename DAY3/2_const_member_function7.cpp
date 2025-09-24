@@ -20,7 +20,7 @@ public:
 	// 생각해 볼 문제
 	// => this 를 컴파일러가 추가하지 말고, 아래 주석처럼(python방식)
 	//    사용자가 직접 코딩하게 하면, 좀더 이해하기 쉽지 않았을까요 ?
-	// 
+	//    => C++23 부터 유사한 문법이 등장 합니다.(파이썬과 유사)
 //	void print()		// void print(Point* this)
 	void print() const	// void print(const Point* this)
 	{
