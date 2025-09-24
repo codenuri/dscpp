@@ -36,6 +36,7 @@ int main()
 	//     p3가 가리키는 곳에 Dog가 있어도 Dog 고유 멤버 접근은 안됨
 
 	// 이유는 C++ 은 "static type check" 언어 이므로
+	
 	// static type check : 컴파일 시간에 타입을 확인하는 것
 	//						C++, java, C#, Rust, swift
 	// 
@@ -45,7 +46,15 @@ int main()
 	// 단지, p3가 가리키는 곳에 Animal 모양이 있다는 것만 안다.
 
 	p3->age = 10;   // ok
-	p3->color = 10; // error
+//	p3->color = 10; // error
+
+
+	// #4. p3를 가지고 Dog 고유멤버인 color 에 접근하려면
+	// 캐스팅해서 접근해야 합니다.
+	// => 개발자가 책임 질테니, 컴파일러에게 허용해달라는 요청
+
+	static_cast<Dog*>(p3)->color = 10; // ok
+
 }
 
 
