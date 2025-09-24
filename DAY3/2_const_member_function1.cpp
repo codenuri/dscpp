@@ -37,5 +37,6 @@ int main()
 	p.x = 10;		// error. public 이지만 상수 객체이므로
 	p.set(10, 20);	// error.
 	p.print();		// error.
+					// 단, print() 가 상수멤버 함수라면 ok
 }
 
