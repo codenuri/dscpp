@@ -1,5 +1,16 @@
 #include <iostream>
 
+// C#/Java/Python  : 모든 객체는 메모리에 자신의 타입정보 보관
+//					 언제라도 타입 조사 가능 
+//					  쉽고, 좋아 보이지만, 
+//					  항상 메모리 오버헤드가 있다는것!!!
+
+// C++ : zero overhead 철학
+// => 필요할때만 타입정보 보관한다!!
+// => virtual 을 사용하지 않으면 타입정보 메모리에 없음.. 최적화된 메모리 
+
+
+
 class Animal
 {
 public:
@@ -20,8 +31,8 @@ int main()
 	Animal a;
 	Dog    dog;
 
-//	Animal* p = &dog;
-	Animal* p = &a;   // 현재 p가 가리키는 것은 Animal
+	Animal* p = &dog;
+//	Animal* p = &a;   // 현재 p가 가리키는 것은 Animal
 
 	// static_cast : 컴파일 시간 캐스팅. 컴파일 할때 허용해 달라는 요청
 	//				=> 실행시간에 변경될수도 있으므로 
