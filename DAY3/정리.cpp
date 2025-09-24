@@ -19,9 +19,15 @@
 //    4. this 개념
 //    5. const member function 
 //    6. 선언과 구현을 분리하는 방법
-//    7. static member
+//    7. static member data, static member function 
 //    8. 복사 생성자 - 5일차 
+// => 모두 이해 해도, 클래스 하나 만들기만 가능
+// => Date, Point, Rect, Vector 등의 한개 타입만 만들수 있다!!
 
 // 3. 객체지향 디자인 기술 => "디자인 패턴 과정"에서 자세히
+// => 상속문법
+// => 객체지향 디자인의 개념
+// => 다양한 디자인 방법들.. 
+
 
 // 4. C++ 표준라이브러리(STL) 사용법
