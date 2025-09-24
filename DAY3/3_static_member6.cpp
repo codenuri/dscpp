@@ -3,15 +3,20 @@
 class Car
 {
 	int color;
-	static int cnt;
+	
+	// C++17 inline static 문법
+	// => static 멤버 데이타 만들때.
+	// => 클래스 외부 정의 없어도 됩니다.
+	// => 빌드해 보려면 "설정에서 C++버전을 C++17 이상으로"
+	inline static int cnt = 0;
 public:
 	Car() { ++cnt; }
 	~Car() { --cnt; }
 
 	static int get_count() { return cnt; } 
-
 };
-int Car::cnt = 0; 
+
+
 
 
 int main()
