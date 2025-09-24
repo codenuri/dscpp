@@ -1,4 +1,5 @@
 // vtable1.cpp
+// => godbolt.org 에 넣으세요
 
 class Base
 {
@@ -10,6 +11,7 @@ public:
 };
 class Derived : public Base
 {
+	int b;
 public:
 	virtual void f2() {}
 };
