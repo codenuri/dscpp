@@ -14,10 +14,18 @@ public:
 
 	void set(int a, int b) { x = a; y = b; }
 
-	void print() const
+	// 상수객체가 "non-const member function" 을 호출하지 못하는 정확한 이유
+	// => 상수 함수는 결국 this 를 만들때 const pointer 로 만들어주는 것
+	
+	// 생각해 볼 문제
+	// => this 를 컴파일러가 추가하지 말고, 아래 주석처럼(python방식)
+	//    사용자가 직접 코딩하게 하면, 좀더 이해하기 쉽지 않았을까요 ?
+	// 
+//	void print()		// void print(Point* this)
+	void print() const	// void print(const Point* this)
 	{
-		//	x = 10; 
-
+		//	x = 10;		// this->x = 10 에서 this 는 const 를 가리키므로
+						//					컴파일 에러
 		std::cout << x << ", " << y << std::endl;
 	}
 };
@@ -26,6 +34,6 @@ int main()
 	const Point p{ 1, 2 };
 
 	p.set(10, 20);	
-	p.print();		
+	p.print();		// print(&p)	
 }
 
