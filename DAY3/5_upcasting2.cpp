@@ -4,6 +4,11 @@ class Animal
 {
 public:
 	int age;
+
+	virtual ~Animal() {}   // 가상 함수로 만든 소멸자
+							// => 내일 배우는 내용
+							// => 가상함수가 있으면 객체 메모리에 타입정보
+							//   추가
 };
 class Dog : public Animal
 {
