@@ -1,3 +1,4 @@
+// QA2.cpp - git ø° ¿÷Ω¿¥œ¥Ÿ.
 #include <iostream>
 
 class Base
@@ -5,31 +6,28 @@ class Base
 protected:
 	int x;
 };
-
-// protected : Í∏∞Î∞ò ÌÅ¥ÎûòÏä§Î°ú Î∂ÄÌÑ∞ Î¨ºÎ†§Î∞õÏùÄ Î©§Î≤ÑÏóê Ï†ëÍ∑º Í∞ÄÎä•ÌïòÎã§Îäî Í≤É
-
-class Derived : public Base 
+// protected : ±‚π› ≈¨∑°Ω∫∑Œ ∫Œ≈Õ π∞∑¡πﬁ¿∫ ∏‚πˆø° ¡¢±Ÿ ∞°¥…«œ¥Ÿ¥¬ ∞Õ
+//			   ¥Ÿ∏• Base ∞¥√º¿« x ¥¬ ¡¢±Ÿ«“ºˆ æ¯¥Ÿ.  
+class Derived : public Base
 {
 public:
 	void foo()
 	{
-		x = 10;			// A
+		x = 10; // A. ok. 
 	}
-	void goo( Base* p)
+
+	void goo(Base* p)
 	{
-		p->x = 10;		// B
+		p->x = 10;	// B. error
 	}
 };
 
 int main()
 {
 	Base base;
-	base.x = 10;
+	base.x = 10; // error
 
 	Derived d;
 	d.foo();
 	d.goo(&base);
 }
-
-
-
