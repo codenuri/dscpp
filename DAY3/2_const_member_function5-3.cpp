@@ -47,7 +47,7 @@ int main()
 	Vector v1(5, 0); 
 	const Vector v2(5, 0); 
 
-	// #1. at() 이 const member function 인 경우
+	// #2. at() 이 const member function 인 경우
 	//					// 원하는동작		현재 동작				
 	v1.at(0) = 10;		// O				O
 	v2.at(0) = 10;		// X				O	<== 이부분이 문제
