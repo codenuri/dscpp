@@ -37,3 +37,13 @@ int main()
 	p.print();		// print(&p)	
 }
 
+
+
+// const 위치에 주의
+// => C 언어를 통해서 아래 코드 완벽히 이해 하세요
+// => Rust, swift 등의 다른 언어도 아래 개념 알아야 합니다. 많이 사용
+
+// int x = 10;
+
+// const int* p = &x; // p가 가리키는 것이 상수. 즉, p를 통해서 x 변경안됨.
+// int* const p = &x; // p자체가 const, p를 통해서 x는 변경가능. 
