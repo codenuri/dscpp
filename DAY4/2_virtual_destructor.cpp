@@ -1,12 +1,18 @@
 // virtual destructor - 148 page
 #include <iostream>
 
+// 핵심 
+// => C++ 사용시, 상속문법을 사용하게 된다면
+// => 반드시 기반 클래스 소멸자는 "virtual" 로 해야 합니다.
+// => "가상소멸자" 라고 불리는 문법
+
 class Base
 {
 public:
 	Base() {}
-	~Base() {}
+	virtual ~Base() {} // 핵심
 };
+
 class Derived : public Base
 {
 public:
