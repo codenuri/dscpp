@@ -33,6 +33,16 @@ int main()
 //	p1->color = 10; // 잘못된 메모리 접근
 
 
+	// dynamic_cast : 실행시간 캐스팅
+	//				  실행할때 p가 가리키는 메모리를 조사해서
+	//				  Dog 타입이 맞으면 주소 반환
+	//				  Dog 타입이 아니면 0    반환
+
+	Dog* p2 = dynamic_cast<Dog*>(p);
+
+	std::cout << p2 << std::endl;
+
+
 }
 
 
