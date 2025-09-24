@@ -58,7 +58,7 @@ int main()
 
 				
 	v1.at(0) = 10;		// O				O
-	v2.at(0) = 10;		// X				X	
+//	v2.at(0) = 10;		// X				X	
 	int n1 = v1.at(0);	// O				O
 	int n2 = v2.at(0);	// O				O
 
