@@ -20,8 +20,14 @@ public:
 
 	// #3. #2 때문에 버그가 너무 많았습니다.
 	// => 그래서 C++11 에서 override 키워드 도입
-	// => 새로운 함수가 아니라 가상함수를 재정의하고 있다고 알려주는 것
-	virtual void Cry() override {}  
+	// => 새로운 함수가 아니라 기반클래스 가상함수를 재정의하고 있다고 알려주는 것
+//	virtual void Cry() override {}  // error
+
+	virtual void cry() override {}  // ok
+
+	// 정리
+	// #1. 가상함수 재정의시 override 붙이세요(없어도 되지만 권장)
+	// #2. override 붙이면 virtual 은 있어도 좋고, 없어도 좋음. 
 };
 
 
