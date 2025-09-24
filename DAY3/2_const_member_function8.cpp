@@ -16,15 +16,19 @@ public:
 
 	void set(int a, int b) { x = a; y = b; }
 
+	// 핵심 : 상수 멤버 함수 만들때는 "선언과 구현" 에 모두 const를 표기
+	//        해야 합니다.
 
-	void print() const	
-	{
-
-		std::cout << x << ", " << y << std::endl;
-	}
+	// 어떤 문법의 키워드가 "선언만 표기" 하는지 "선언과 구현에 모두표기"
+	// 하는 지를 정확히 정리해 두세요..
+	void print() const;
 };
 
+void Point::print() const
+{
 
+	std::cout << x << ", " << y << std::endl;
+}
 
 int main()
 {
