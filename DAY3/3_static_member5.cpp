@@ -1,7 +1,10 @@
 ﻿#include <iostream>
 
 // 선언과 구현의 분리
+// const  member function 의 const : 양쪽 모두 표기
+// static member function 의 static : 선언만 표기(구현은 없어야 합니다)
 
+// Car.h
 class Car
 {
 	int color;
@@ -12,6 +15,8 @@ public:
 	static int get_count();
 };
 
+// Car.cpp 
+//#include "Car.h"
 int Car::cnt = 0;  
 
 Car::Car() 
@@ -22,7 +27,7 @@ Car::~Car()
 { 
 	--cnt; 
 }
-static int Car::get_count() 
+int Car::get_count() 
 {
 	return cnt; 
 }
