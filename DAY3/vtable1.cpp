@@ -29,4 +29,6 @@ int main()
 	std::cout << sizeof(b1) << std::endl;
 	std::cout << sizeof(d1) << std::endl;
 }
-// vtable2.cpp 만들어서 그대로 복사해 놓으세요.
+// vtable2.cpp 만들어서 그대로 복사해 놓으세
+// 
+// 요.
