@@ -8,11 +8,16 @@ class Point
 	int y;
 public:
 	Point(int x, int y) : x{ x }, y{ y } {}
+
+	friend std::ostream& operator<<(std::ostream& o, const Point& pt);
 };
 
-? operator<<(? , ? )
+std::ostream& operator<<(std::ostream& o , const Point& pt )
 {
+	// 이제 여기서 o 는 cout 의 별명, cout 과 동일하게 사용가능
+	o << pt.x << ", " << pt.y;
 
+	return o;
 }
 
 int main()
