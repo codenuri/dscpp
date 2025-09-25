@@ -12,6 +12,7 @@ public:
 	friend std::ostream& operator<<(std::ostream& o, const Point& pt);
 };
 
+// 1번째 인자에 const 가 없는 이유는 cout4.cpp 를 다시 보세요
 std::ostream& operator<<(std::ostream& o , const Point& pt )
 {
 	// 이제 여기서 o 는 cout 의 별명, cout 과 동일하게 사용가능
