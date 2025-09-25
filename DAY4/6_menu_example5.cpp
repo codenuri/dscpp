@@ -20,7 +20,13 @@ public:
 	virtual ~BaseMenu() {} // 가상 소멸자
 
 	std::string get_title() const { return title; }
+
+
+	// 모든 메뉴는 선택될수 있습니다.
+	virtual void command() = 0;
 };
+
+
 
 class MenuItem : public BaseMenu
 {
