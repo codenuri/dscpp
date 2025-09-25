@@ -22,10 +22,29 @@ public:
 	}
 };
 
+class PopupMenu
+{
+	std::string title;
+	std::vector<MenuItem*> v;
+public:
+	PopupMenu(const std::string& title) :title{ title } {}
+
+	void add(MenuItem* m) { v.push_back(m); }
+
+	// ÇÙ½É : ÆË¾÷¸Þ´º¸¦ ¼±ÅÃÇÒ¶§ µ¿ÀÛ
+	void command()
+	{
+
+	}
+
+};
+
+
 int main()
 {
 	MenuItem m1("±è¹ä", 11);
 	MenuItem m2("¶ó¸é", 12);
+
 
 	PopupMenu pm("¿À´ÃÀÇ Á¡½É");
 
