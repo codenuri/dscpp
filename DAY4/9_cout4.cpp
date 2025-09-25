@@ -10,6 +10,12 @@ int main()
 	r1 << "ABC" << 10 << std::endl;
 
 
+
+	// 그런데, const& 로 하면 << 연산 안됩니다.
+
+	const std::ostream& r2 = std::cout;
+
+	r2 << "ABC"; // error
 }
 
 
