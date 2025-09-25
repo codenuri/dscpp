@@ -79,6 +79,7 @@ int main()
 	PopupMenu pm("오늘의 점심");
 
 	pm.add(&kimbab); // 핵심!!! 될까요 ? 어떻해야 될까요 ?
+				     // => 해결은 다음소스에서
 	pm.add(&m9);
 
 	pm.command(); 
