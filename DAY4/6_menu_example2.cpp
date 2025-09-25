@@ -6,6 +6,21 @@
 // 객체지향 프로그램의 핵심
 // => 필요한 타입을 먼저 설계 하라
 
+class MenuItem
+{
+	std::string title;
+	int id;
+public:
+	MenuItem(const std::string& title, int id) 
+		: title{ title }, id{ id } {}
+
+	std::string get_title() const { return title; }
+
+	void command()
+	{
+		
+	}
+};
 
 int main()
 {
