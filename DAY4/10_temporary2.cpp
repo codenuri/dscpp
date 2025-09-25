@@ -34,12 +34,14 @@ int main()
 						// from, to 는 메모리에 계속 존재
 						// 선언된 블럭을 벗어날때 파괴!
 
-	draw_line(Point{ 1,1 }, Point{ 2,2 }); // 인자를 temorary 형태로 전달
+	draw_line( Point{ 1,1 }, Point{ 2,2 } ); // 인자를 temorary 형태로 전달
 											// 함수 호출이 종료되면
 											// 즉시 파괴
 
 }
 
+// 함수 인자로 객체(Point 타입)를 전달할때..
+// => 인자로만 사용할 객체가 필요하면, temporary 형태로 전달이 효율적
 
 
 
