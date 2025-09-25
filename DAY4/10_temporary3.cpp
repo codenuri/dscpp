@@ -28,14 +28,22 @@ int main()
 
 Point pt{ 1, 2 };
 
-Point foo() 
+Point foo() // return by value : pt가 아닌 pt의 복사본 반환. 
 {
-	return pt; 
+	return pt; // 메모리에 pt의 복사본이 생성됩니다.
+				// 생성된 복사본이 main 의 A 위치에 반환
+				// 생성된 복사본은 이름이 없는 temporary
+				// A의 문장끝에서 파괴!!
 }
 
+Point& goo()  // return by reference : 리턴용 임시객체를 만들지 말고
+{				//						pt 별명을 반환해 달라.
+	return pt;
+}
 int main()
 {
-	foo();
+	foo(); // A
+	goo(); // 반환 값은 pt의 별명!!
 }
 
 
