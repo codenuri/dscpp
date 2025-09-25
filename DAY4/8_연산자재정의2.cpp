@@ -29,5 +29,8 @@ int main()
 	//       = operator+(p1, p2);  
 
 	p3.print();
+
+	// 아래 처럼 직접 호출도 가능
+	Point p3 = operator+(p1, p2);
 }
 

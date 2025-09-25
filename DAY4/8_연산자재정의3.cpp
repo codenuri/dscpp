@@ -30,5 +30,8 @@ int main()
 	//       = p1.operator+(p2);   // member 함수	
 	
 	p3.print();
+
+	// 아래 처럼 직접 호출도 가능
+	Point p4 = p1.operator+(p2);
 }
 
