@@ -12,7 +12,7 @@ class Counter
 {
 	int cnt = 0;
 public:
-//	Counter  increment()  // 버그.. 내 자신이 아닌 복사본 반환 입니다.
+	//	Counter  increment()  // 버그.. 내 자신이 아닌 복사본 반환 입니다.
 	Counter& increment()  // <== 이렇게 해야 합니다.
 	{
 		++cnt;
@@ -24,6 +24,15 @@ public:
 	~Counter()
 	{
 		std::cout << "~Counter() : cnt = " << cnt << std::endl;
+	}
+
+	Counter() {}  // 디폴트 생성자
+
+	// 아래 함수가 내일 배우는 "복사 생성자"
+	// => temporary 만들때 아래 함수 사용
+	Counter(const Counter& other) : cnt{ other.cnt }
+	{
+		std::cout << "temporary 생성 : cnt " << cnt << std::endl;
 	}
 };
 
@@ -51,5 +60,5 @@ int main()
 // => Point foo() ;
 
 // 3. 메소드 체이닝등의 기술을 위해 *this 를 반환 한다면
-// => 반드시 referenfce 타입으로 반환
+// => 반드시 reference 타입으로 반환
 
