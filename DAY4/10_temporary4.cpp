@@ -12,8 +12,8 @@ class Counter
 {
 	int cnt = 0;
 public:
-	//	Counter  increment()  // 버그.. 내 자신이 아닌 복사본 반환 입니다.
-	Counter& increment()  // <== 이렇게 해야 합니다.
+	Counter  increment()  // 버그.. 내 자신이 아닌 복사본 반환 입니다.
+//	Counter& increment()  // <== 이렇게 해야 합니다.
 	{
 		++cnt;
 
