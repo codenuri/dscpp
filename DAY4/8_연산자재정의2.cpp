@@ -8,6 +8,8 @@ public:
 	Point(int x = 0, int y = 0) : x(x), y(y) {}
 
 	void print() const { std::cout << x << ", " << y << std::endl; }
+
+	friend Point operator+(const Point& p1, const Point& p2);
 };
 
 Point operator+(const Point& p1, const Point& p2 )
@@ -26,5 +28,6 @@ int main()
 	Point p3 = p1 + p2;
 	//       = operator+(p1, p2);  
 
+	p3.print();
 }
 
