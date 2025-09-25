@@ -52,7 +52,7 @@ int main()
 	HDCamera hc;
 	p.use_camera(&hc); // ok
 
-	UHDCamera hc;
+	UHDCamera uhc;
 	p.use_camera(&uhc); // ok. People 을 수정하지 않고도
 						// 새로운 카메라 제품을 사용할수 있다.
 }
