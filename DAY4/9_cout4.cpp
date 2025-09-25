@@ -16,6 +16,10 @@ int main()
 	const std::ostream& r2 = std::cout;
 
 	r2 << "ABC"; // error
+	r2.operator <<("ABC");
+
+	// => r2는 상수 객체인데..
+	// => operator<<() 는 상수 멤버 함수가 아닙니다.
 }
 
 
