@@ -16,6 +16,8 @@ class Shape
 	int color = 0;
 public:
 	virtual ~Shape() {}
+
+	void draw() { std::cout << "draw shape\n"; }
 };
 
 class Rect : public Shape
