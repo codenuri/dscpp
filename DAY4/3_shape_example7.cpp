@@ -60,6 +60,16 @@ int main()
 			// k 번째 도형의 복사본을 생성해서 v에 추가 합니다.
 			// 어떻게 코드를 만들어야 할까요 ?
 			// k 번째 도형은 뭘까요 ?
+
+			// 해결책 #1. 조사!!
+			if (dynamic_cast<Rect*>(v[k]) != nullptr)
+			{
+				//...
+			}
+			else if (dynamic_cast<Circle*>(v[k]) != nullptr)
+			{
+				//... 복사본 생성후 v에 넣기 
+			}
 		}
 
 	}
