@@ -39,16 +39,21 @@ public:
 		}
 	}
 
-	// 상수 객체 일때와 상수 객체가 아닐때 다르게 동작하게 하고 싶은 경우가 있습니다.
-	// 아래 at() 같은 경우
-	// => 의외로 이런 경우가 많이 있습니다.
-	// => 해결책 2개 만드세요
-
-	int& at(int idx)		// 상수 객체가 아닌 경우 호출
+	int& at(int idx)		
 	{
 		return ptr[idx];
 	}
-	const int& at(int idx) const	// 상수 객체인 경우 호출
+	const int& at(int idx) const	
+	{
+		return ptr[idx];
+	}
+
+	// at => operator[]
+	int& operator[](int idx)
+	{
+		return ptr[idx];
+	}
+	const int& operator[](int idx) const
 	{
 		return ptr[idx];
 	}
@@ -59,10 +64,13 @@ int main()
 	const Vector v2(5, 0);
 
 
-	v1.at(0) = 10;		// O				O
-	v2.at(0) = 10;		// X				X	
-	int n1 = v1.at(0);	// O				O
-	int n2 = v2.at(0);	// O				O
+	v1.at(0) = 10;		
+	int n1 = v1.at(0);
+	int n2 = v2.at(0);
 
 
+	// at() 뿐 아니라 []도 가능하도록 해봅시다. - 진짜 배열처럼
+	v1[0] = 10;		
+	int n3 = v1[0];
+	int n4 = v2[0];
 }
