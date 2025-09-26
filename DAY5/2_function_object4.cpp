@@ -6,8 +6,9 @@ class URandom
 {
 	std::bitset<N> bs; 
 	bool recycle;
+	int start;
 public:
-	URandom(bool b = false) : recycle{ b }
+	URandom(int start = 0, bool b = false) : start{ start }, recycle { b }
 	{
 		bs.set();  
 	}
@@ -29,11 +30,11 @@ public:
 
 		bs.reset(k);
 
-		return k;
+		return k + start;
 	}
 };
 
-URandom<20> urand{ true };
+URandom<20> urand{ 11, true };
 
 int main()
 {
