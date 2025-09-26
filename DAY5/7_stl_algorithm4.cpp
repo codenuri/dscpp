@@ -21,6 +21,9 @@ int main()
 
 	auto ret2 = std::find(v.begin(), v.end(),  foo );
 
+
+	auto ret2 = std::find(v.begin(), v.end(),      );
+
 }
 
 
