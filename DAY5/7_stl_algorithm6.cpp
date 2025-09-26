@@ -11,10 +11,18 @@ int main()
 	// 주어진 구간에서 3을 -1로 변경
 	std::replace(v.begin(), v.end(), 3, -1);
 	 
+
 	// 주어진 구간에서 "짝수"를 0으로 변경해 보세요 
 	// => 람다 표현식으로 해보세요
-	// ?
+	
+
+	std::replace_if(v.begin(), v.end(), 
+		[](int n) { return n % 2 == 0; }, 0);
+
 
 	for (auto e : v)
 		std::cout << e << ", ";
 }
+// cppreference.com 에서 
+// 1. std::find 검색
+// 2. 상위문서로 이동
