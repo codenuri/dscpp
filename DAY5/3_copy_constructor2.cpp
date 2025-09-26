@@ -38,5 +38,11 @@ int main()
 //	Point p4{p1};
 
 	// #2. 함수가 call by value 로 객체를 받을때
-	f1(p1);
+//	f1(p1); // 원리 "Point p = p1" 이므로 복사생성자 호출
+//	f2(p1); // Point& p = p1 이므로 복사본 생성 안됨. 복사 생성자 호출안됨.
+
+
+	// #3. 함수가 객체를 값타입으로 반환 할때
+	f3(); // temporary 가 반환되는데, temporary 만들때 복사 생성자사용
+	f4(); // 참조반환이므로 temporary 생성안됨
 }
