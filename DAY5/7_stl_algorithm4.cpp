@@ -21,8 +21,14 @@ int main()
 
 	auto ret2 = std::find(v.begin(), v.end(),  foo );
 
+	// 람다 표현식 (C++11 부터)
+	// => 함수 인자로 "함수" 를 전달할때
+	// => 함수 이름(주소)가 아닌 함수 구현자체를 전달하는 기술
+	// => 이름이 없는(익명의) 함수 를 만드는 문법
 
-	auto ret2 = std::find(v.begin(), v.end(),      );
+	// [] : 람다 표현식이 시작됨을 알리는 "lambda introducer"
+
+	auto ret3 = std::find(v.begin(), v.end(), [](int n) { return n % 3 == 0; });
 
 }
 
