@@ -10,7 +10,7 @@ class URandom
 	std::bitset<10> bs; // 10 bit 관리
 	bool recycle;
 public:
-	URandom(bool b = false) : recycle{false}
+	URandom(bool b = false) : recycle{b}
 	{ 
 //		bs.set(3); // 3번째 비트만 1로
 		bs.set();  // 모든 비트를 1로
@@ -18,7 +18,13 @@ public:
 
 	int operator()()
 	{
-		return rand() % 10;
+		int k;
+
+		while (!bs.test(k = rand() % 10));
+
+		bs.reset(k);
+
+		return k;
 	}
 };
 
