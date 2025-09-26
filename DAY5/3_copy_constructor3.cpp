@@ -21,10 +21,11 @@ public:
 	~Vector() { delete[] ptr; }
 };
 
-	
-
 int main()
 {
-	Vector v1{ 4, 0 };
+	Vector v1{ 4, 0 }; // 이 코드는 ok
+	Vector v2 = v1;    // runtime- error
+
+	std::cout << "이메세지 출력되는지 확인\n";
 	
 }
