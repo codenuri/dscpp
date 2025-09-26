@@ -34,8 +34,8 @@ int main()
 {
 	Vector v1{ 4, 0 }; // 이 코드는 ok
 
-	Vector v2 = v1;    // runtime- error
+	Vector v2 = v1;    // 여기서는 문제 없음.
 
 
 	
-}
+} // <=== v1, v2 파괴 될때.. 여기서 문제..  메모리 2번해제. 
