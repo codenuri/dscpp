@@ -39,6 +39,8 @@ int main()
 		int ret = db_backup();
 
 		std::cout << "예외 발생시 이문장 실행안됨\n";
+
+		db_remove();
 	}
 	catch (const disconnect_wifi& e)
 	{
@@ -52,10 +54,10 @@ int main()
 	{
 		std::cout << "예외 발생\n";
 	}
-	catch (...)
+	catch (...)	// 반드시 제일 마지막에 있어야 합니다.
 	{
 		std::cout << "위에서 처리되지 않은 모든 경우를 여기서 잡겠다.\n";
 	}
 
-	db_remove();
+
 }
