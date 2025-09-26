@@ -4,6 +4,8 @@
 #include <list>
 #include <algorithm>
 
+bool foo(int n) { return n % 3 == 0;}
+
 int main()
 {
 	std::vector<int> v = { 1,2,9,4,3,6,7,3,9,10 };
@@ -13,7 +15,11 @@ int main()
 
 
 	// 주어진 구간에서 처음 나오는 "3의 배수" 을 찾아라
-	auto ret2 = std::find(v.begin(), v.end(),  ? );
+	
+	// std::find    : 값 검색,   3번째 인자는 값
+	// std::find_if : 조건 검색, 3번째 인자는 조건을 담은 함수
+
+	auto ret2 = std::find(v.begin(), v.end(),  foo );
 
 }
 
