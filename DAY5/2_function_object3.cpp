@@ -18,9 +18,18 @@ public:
 
 	int operator()()
 	{
+		if (bs.none()) // 모든 비트 0이면
+		{
+			if (recycle == false)
+				return -1; // 더이상 난수 없음. 
+			else
+				bs.set(); // 다시 모두 1로 			
+		}
+
+
 		int k;
 
-		while (!bs.test(k = rand() % 10));
+		while ( !bs.test( k = rand() % 10 ) );
 
 		bs.reset(k);
 
@@ -28,12 +37,15 @@ public:
 	}
 };
 
+
+
+
 URandom urand;  // urand 는 객체지만 함수 처럼 사용가능.
 				// main 수정할 필요 없습니다.
 
 int main()
 {
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 15; i++)
 	{
 		std::cout << urand() << std::endl;
 	}
